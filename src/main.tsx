@@ -15,5 +15,6 @@ import './pyq-library.css'
 import './subject-dashboard-close.css'
 import './certificate-galleries.css'
 import './final-layout-adjustments.css'
+import './sih-presentations.css'
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>)
