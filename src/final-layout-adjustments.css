@@ -1,0 +1,197 @@
+/* Targeted final layout refinements. */
+
+/* Keep every supplied hackathon platform visible in one balanced desktop row. */
+.hackathon-platform-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hackathon-platform-grid .resource-card {
+  min-height: 238px;
+  padding: 16px;
+}
+
+.hackathon-platform-grid .resource-card-copy {
+  padding: 18px 0 12px;
+}
+
+.hackathon-platform-grid .resource-card h3 {
+  font-size: 18px;
+}
+
+/* The four academic selectors retain their two-by-two layout with a full-grid divider cross. */
+.year-flip-grid-wrap {
+  position: relative;
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.year-flip-grid {
+  grid-template-columns: repeat(2, minmax(360px, 468px));
+  gap: 64px;
+}
+
+.year-flip-card {
+  height: 314px;
+}
+
+.year-flip-card-front {
+  padding: 25px;
+}
+
+.year-card-badge {
+  top: 24px;
+  left: 25px;
+}
+
+.year-card-prompt {
+  margin-top: 16px;
+}
+
+.year-flip-card-back {
+  padding: 15px;
+}
+
+.year-subject-list {
+  gap: 3px;
+  padding-top: 8px;
+}
+
+.year-subject-row {
+  min-height: 38px;
+  padding: 5px 7px;
+}
+
+.academic-grid-separator {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.academic-grid-separator i {
+  position: absolute;
+  display: block;
+  background: color-mix(in srgb, var(--accent) 88%, #fff);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+.academic-grid-separator i:first-child {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  transform: translateY(-50%);
+}
+
+.academic-grid-separator i:last-child {
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+:root[data-theme='light'] .academic-grid-separator i {
+  background: color-mix(in srgb, var(--accent) 82%, var(--ink));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+/* Keep the two resume previews compact and centred as a group. */
+.reference-gallery--resume {
+  max-width: 780px;
+  margin: 34px auto 0;
+}
+
+.reference-gallery--resume .reference-grid {
+  max-width: 780px;
+  gap: 18px;
+  margin-inline: auto;
+}
+
+/* Reuse the LOR gallery's card dimensions without changing either document set. */
+.reference-gallery--resume .reference-card {
+  min-height: 170px;
+}
+
+.reference-gallery--resume .reference-thumbnail img {
+  height: 116px;
+}
+
+/* A standalone editorial marker introduces the upcoming preparation module. */
+.upcoming-display-heading {
+  padding: 74px 0 70px;
+  text-align: center;
+}
+
+.upcoming-display-heading h2 {
+  margin: 0;
+  color: var(--accent);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(128px, 10vw, 142px);
+  font-weight: 700;
+  letter-spacing: -.065em;
+  line-height: .88;
+}
+
+@media (max-width: 960px) {
+  .hackathon-platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .year-flip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 52px;
+  }
+
+  .year-flip-card {
+    height: 306px;
+  }
+
+  .year-flip-card-front {
+    padding: 22px;
+  }
+
+  .year-card-badge {
+    top: 21px;
+    left: 22px;
+  }
+
+  .upcoming-display-heading h2 {
+    font-size: clamp(92px, 11vw, 104px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hackathon-platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .year-flip-grid {
+    grid-template-columns: minmax(0, 430px);
+  }
+
+  .year-flip-card {
+    height: 310px;
+  }
+
+  .academic-grid-separator {
+    display: none;
+  }
+
+  .reference-gallery--resume,
+  .reference-gallery--resume .reference-grid {
+    max-width: 480px;
+  }
+
+  .upcoming-display-heading {
+    padding: 54px 0 48px;
+  }
+
+  .upcoming-display-heading h2 {
+    font-size: clamp(62px, 16vw, 70px);
+  }
+}

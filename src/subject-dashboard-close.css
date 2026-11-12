@@ -1,0 +1,2 @@
+.subject-resource-dashboard{position:relative}.subject-dashboard-close{position:absolute;top:20px;right:20px;display:grid;place-items:center;width:36px;height:36px;color:var(--muted);background:var(--surface-2);border:1px solid var(--line-bright);border-radius:7px;transition:color .2s,background .2s,border-color .2s,transform .2s}.subject-dashboard-close:hover{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);transform:rotate(4deg)}
+@media(max-width:590px){.subject-dashboard-close{top:16px;right:16px;width:33px;height:33px}}
